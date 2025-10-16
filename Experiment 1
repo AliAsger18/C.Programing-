@@ -1,0 +1,11 @@
+//Ali Asgar Devjani, uin:251P114, Frist year Division:D 
+#include <stdio.h>
+int main()
+{ 
+printf("Name: \t\tAli Asgar Devjani\n");
+printf("Age:\t\t19\n"); 
+printf("Class:\t\tFirst Year\n"); 
+printf("Division:\tD\n"); 
+printf("UIN:\t\t251P114\n"); 
+return 0;
+}
