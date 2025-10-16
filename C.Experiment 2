@@ -1,0 +1,23 @@
+//Ali Asgar Devjani, uin:251P114, Frist year  Division:D 
+#include <stdio.h>
+
+Int main() {
+
+Int num;
+
+Printf(“Enter a number: “);
+
+Scanf(“%d”, &num);
+
+If (num %2==0)
+
+Printf(“%d is Even”, num);
+
+Else
+
+Printf(“%d is Odd”,num);
+
+Return 0;
+
+}
+
