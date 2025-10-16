@@ -1,0 +1,50 @@
+//Ali Asgar Devjani, uin:251P114, Frist year  Division:D 
+#include <stdio.h>
+Int main() {
+Int choice;
+Float num1, num2, result;
+Start:
+Printf(“Simple Calculator: \n”);
+Printf(“1. Addition\n”);
+Printf(“2. Subtraction\n”);
+Printf(“3. Multiplication\n”);
+Printf(“4. Division\n”);
+Printf(“5. Exit\n”);
+Printf(“Enter your choice: “);
+Scanf(“%d”, &choice);
+If (choice == 5) {
+Printf(“Exiting…”); return 0;
+}
+If (choice < 1 || choice > 5) {
+}
+Printf(“Invalid choice”); goto start;
+Printf(“Enter two numbers: “);
+Scanf(“%f %f”, &num1, &num2);
+Switch (choice) {
+Case 1:
+Result = num1 + num2;
+Printf(“Result: %.2f”, result);
+Break;
+Case 2:
+Result = num1 num2;
+Printf(“Result: %.2f”, result);
+Break;
+Case 3:
+Result = num1 * num2;
+Printf(“Result: %.2f”, result);
+Break;
+Case 4:
+If (num2 == 0) {
+Printf(“Cannot divide by zero” );
+} else {
+Result = num1 / num2;
+Printf(“Result: %.2f”, result);
+}
+Break;
+Default:
+Printf(“Invalid choice”);
+}
+Goto start;
+Return 0;
+}
+
