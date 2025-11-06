@@ -1,0 +1,29 @@
+// Name:Ali Asgar Devjani Uin:251P114 Roll no: 36 Div:D
+
+#include <stdio.h>
+
+int factorial_iterative(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int factorial_recursive(int n) {
+    if (n <= 1)
+        return 1;
+    else
+        return n * factorial_recursive(n - 1);
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("Iterative: Factorial of %d = %d", n, factorial_iterative(n));
+    printf("Recursive: Factorial of %d = %d", n, factorial_recursive(n));
+
+    return 0;
+}
