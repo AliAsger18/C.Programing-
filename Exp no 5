@@ -1,0 +1,40 @@
+// Nmae:Ali Asgar, Roll no:36, Div:D, UIN:251P114.
+#include <stdio.h>
+
+long long factorialRecursive(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorialRecursive(n - 1);
+}
+
+int main() {
+    int n, choice;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("\nChoose method:\n");
+    printf("1. Iterative\n");
+    printf("2. Recursive\n");
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+
+        printf("Factorial (Iterative) = %lld", fact);
+    }
+
+    else if (choice == 2) {
+        printf("Factorial (Recursive) = %lld", factorialRecursive(n));
+    }
+
+    else {
+        printf("Invalid choice!");
+    }
+
+    return 0;
+}
