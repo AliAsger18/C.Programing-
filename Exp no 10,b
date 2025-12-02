@@ -1,0 +1,22 @@
+// Name:Ali Asgar, Roll no:36, Div:D, UIN:251P114.
+#include <stdio.h>
+
+int main() {
+    int arr[5], i;
+    int *ptr;
+
+    printf("Enter 5 numbers:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    ptr = &arr[4];
+
+    printf("Array in reverse order:\n");
+    for (i = 4; i >= 0; i--) {
+        printf("%d ", *ptr);
+        ptr--;  
+    }
+
+    return 0;
+}
