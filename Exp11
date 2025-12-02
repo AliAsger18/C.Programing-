@@ -1,0 +1,58 @@
+// Name:Ali Asgar, Roll no:36, Div:D, UIN:251P114.
+#include <stdio.h>
+
+struct Employee {
+    int id;
+    char name[50];
+    float salary;
+};
+
+int main() {
+    struct Employee emp;
+    FILE *fp;
+    int choice;
+
+    do {
+        printf("\n--- Employee Database Menu ---\n");
+        printf("1. Add Employee\n");
+        printf("2. Display All Employees\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            // Open file in append mode
+            fp = fopen("employee.txt", "a");
+
+            printf("Enter Employee ID: ");
+            scanf("%d", &emp.id);
+
+            printf("Enter Employee Name: ");
+            scanf("%s", emp.name);
+
+            printf("Enter Employee Salary: ");
+            scanf("%f", &emp.salary);
+
+            // Write to file
+            fprintf(fp, "%d %s %.2f\n", emp.id, emp.name, emp.salary);
+            fclose(fp);
+
+            printf("Employee added successfully!\n");
+        }
+
+        else if (choice == 2) {
+            // Open file in read mode
+            fp = fopen("employee.txt", "r");
+
+            printf("\n--- Employee Records ---\n");
+            while (fscanf(fp, "%d %s %f", &emp.id, emp.name, &emp.salary) != EOF) {
+                printf("ID: %d | Name: %s | Salary: %.2f\n",
+                       emp.id, emp.name, emp.salary);
+            }
+            fclose(fp);
+        }
+
+    } while (choice != 3);
+
+    return 0;
+}
